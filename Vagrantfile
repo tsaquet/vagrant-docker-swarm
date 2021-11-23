@@ -19,10 +19,10 @@ numcpu = 1
 instances = []
 
 (1..numworkers).each do |n|
-  instances.push({:name => "worker#{n}", :ip => "192.168.10.#{n+2}"})
+  instances.push({:name => "worker#{n}", :ip => "192.168.56.#{n+2}"})
 end
 
-manager_ip = "192.168.10.2"
+manager_ip = "192.168.56.2"
 
 File.open("./hosts", 'w') { |file|
   instances.each do |i|
